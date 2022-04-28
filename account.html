@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Cuenta - Francisca Bravo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+       <div class="container">
+          <div class="navbar">
+              <div class="logo">
+                  <a href="index.html"><img src="images/logo.png" width="125px"></a>
+              </div>
+              <nav>
+               <ul id="MenuItems">
+                   <li><a href="index.html">Inicio</a></li>
+                   <li><a href="products.html">Servicios</a></li>
+                   <li><a href="contact.html">Contacto</a></li>
+                   <li><a href="account.html">Mi Cuenta</a></li>
+               </ul>
+              </nav>
+              <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+              <img src="images/menu.png" onclick="menutoggle()" class="menu-icon">
+          </div>
+          
+          
+       </div>
+       
+       
+<!--------------Cart Items details--------------->
+<div class="accout-page">
+    <div class="container">
+  
+       <div class="row">
+         
+          <div class="col-2">
+             <img src="images/foto-main.png" width="100%">
+          </div>
+          
+           <div class="col-2">
+              <div class="form-container">
+                 <div class="form-btn">
+                     <span onclick="login()">Iniciar Sesion</span>
+                     <span onclick="register()">Registrarse</span>
+                     <hr id="indicator">
+                 </div>
+                 
+               <form id="LoginForm">
+                   <input type="text" placeholder="Usuario">
+                   <input type="password" placeholder="Contraseña">
+                   <button type="submit" class="btn" id="inicioAlert">Iniciar Sesion</button>
+                   <a href="">Olvide mi contraseña</a>
+               </form>
+
+               <form id="RegForm">
+                   <input type="text" placeholder="Usuario">
+                   <input type="email" placeholder="Email">
+                   <input type="password" placeholder="Contraseña">
+                   <button type="submit" class="btn" id="registerAlert">Registrarse</button>
+               </form>
+              </div>
+           </div>
+       </div>
+</div>
+</div>
+
+<!----------Footer---------------> 
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col1">
+               <h3>Nuestras Sucursales</h3>
+                <p>Rosario, Laprida 1248</p>
+                <p>Arroyo seco, Don Orione 828</p>
+                <p>Villa Constitución, Sarmiento 718</p>
+            </div>
+            <div class="footer-col2">
+               <img src="images/logo.png">
+                <p>Nuestro objetivo es mejorar tu bienestar personal!</p>
+            </div>
+            <div class="footer-col3">
+               <h3>Otros Links</h3>
+                <ul>
+                    <li>Cupones</li>
+                    <li>Blog</li>
+                    <li>Politicas</li>
+                    <li>Afiliate</li>
+                </ul>
+            </div>
+            <div class="footer-col4">
+               <h3>Seguinos</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/Spa-Francisca-Bravo-532541203452224/" target="_BLANK">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/francisca.bra/" target="_BLANK">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright"><a href="https://www.lucastrigo.com/" target="_BLANK">Creada por Lucas Trigo</a></p>
+    </div>
+    
+</div>
+
+<script>
+    const loginAlert = document.getElementById('inicioAlert');
+    const registerAlert = document.getElementById('registerAlert');
+
+    loginAlert.addEventListener('click', function () {
+        alert('Opcion no disponible en este momento. Estamos trabajando para habilitarlo en la brevedad');
+        return;
+    })
+
+    registerAlert.addEventListener('click', function () {
+        alert('Opcion no disponible en este momento. Estamos trabajando para habilitarlo en la brevedad');
+        return;
+    })
+</script>
+
+
+<!-------------js for toggle menu-------------->
+
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+    
+    MenuItems.style.maxHeight = "0px";
+    
+    function menutoggle()
+    {
+        if(MenuItems.style.maxHeight == "0px")
+            {
+                MenuItems.style.maxHeight = "200px";
+            }else
+            {
+                MenuItems.style.maxHeight = "0px"
+            } 
+    }
+     
+</script>
+<!------------------- form toggle ----------->
+    <script>
+        var LoginForm = document.getElementById("LoginForm");
+        var RegForm = document.getElementById("RegForm");
+        var Indicator = document.getElementById("indicator");
+        
+        function register(){
+                RegForm.style.transform = "translateX(0px)";
+                LoginForm.style.transform = "translateX(0px)";
+                Indicator.style.transform = "translateX(100px)"
+            };
+        function login(){
+                RegForm.style.transform = "translateX(300px)";
+                LoginForm.style.transform = "translateX(300px)";
+                Indicator.style.transform = "translateX(0px)"
+            };
+            
+    </script>
+    
+    
+    
+</body>
+</html>
+

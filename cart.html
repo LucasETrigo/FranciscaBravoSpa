@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - Francisca Bravo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+       <div class="container">
+          <div class="navbar">
+              <div class="logo">
+                  <a href="index.html"><img src="images/logo.png" width="125px"></a>
+              </div>
+              <nav>
+               <ul id="MenuItems">
+                   <li><a href="index.html">Inicio</a></li>
+                   <li><a href="products.html">Servicios</a></li>
+                   <li><a href="contact.html">Contacto</a></li>
+                   <li><a href="account.html">Mi Cuenta</a></li>
+               </ul>
+              </nav>
+              <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+              <img src="images/menu.png" onclick="menutoggle()" class="menu-icon">
+          </div>
+          
+       </div>
+       
+       
+<!--------------Cart Items details--------------->
+<div class="small-container cart-page">
+   
+   <table>
+       <tr>
+           <th>Servicio</th>
+           <th>Cantidad</th>
+           <th>Subtotal</th>
+       </tr>
+
+       <tr>
+           <td>
+               <div class="cart-info">
+                   <img src="images/Tratamientos/ondas.jpg">
+                   <div>
+                       <p>Ondas De Choque</p>
+                       <small>Precio: $1500</small><br>
+                       <a href="">Eliminar</a>
+                   </div>
+               </div>
+           </td>
+           <td><input type="number" value="1"></td>
+           <td>$1500</td>
+       </tr>
+       <tr>
+           <td>
+               <div class="cart-info">
+                   <img src="images/Tratamientos/venus.jpg">
+                   <div>
+                       <p>Venus Freeze</p>
+                       <small>Precio: $2000</small><br>
+                       <a href="">Eliminar</a>
+                   </div>
+               </div>
+           </td>
+           <td><input type="number" value="1"></td>
+           <td>$2000</td>
+       </tr>
+       <tr>
+           <td>
+               <div class="cart-info">
+                   <img src="images/Tratamientos/ultracavi.jpg">
+                   <div>
+                       <p>Ultracavitacion</p>
+                       <small>Precio: $1800</small><br>
+                       <a href="">Eliminar</a>
+                   </div>
+               </div>
+           </td>
+           <td><input type="number" value="1"></td>
+           <td>$1800</td>
+       </tr>
+   </table>
+    
+    <div class="total-price">
+        <table>
+            <tr>
+                <td>Subtotal</td>
+                <td>$5300</td>
+            </tr>
+            <tr>
+                <td>Impuestos</td>
+                <td>$700</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>$6000</td>
+            </tr>
+            
+        </table>
+    </div>
+    <div class="total-price">
+        <a href="#" class="btn">Continuar al pago &#8594;</a>
+    </div>
+    
+</div>
+
+<!----------Footer---------------> 
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col1">
+               <h3>Nuestras Sucursales</h3>
+                <p>Rosario, Laprida 1248</p>
+                <p>Arroyo seco, Don Orione 828</p>
+                <p>Villa Constitución, Sarmiento 718</p>
+            </div>
+            <div class="footer-col2">
+               <img src="images/logo.png">
+                <p>Nuestro objetivo es mejorar tu bienestar personal!</p>
+            </div>
+            <div class="footer-col3">
+               <h3>Otros Links</h3>
+                <ul>
+                    <li>Cupones</li>
+                    <li>Blog</li>
+                    <li>Politicas</li>
+                    <li>Afiliate</li>
+                </ul>
+            </div>
+            <div class="footer-col4">
+               <h3>Seguinos</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/Spa-Francisca-Bravo-532541203452224/" target="_BLANK">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/francisca.bra/" target="_BLANK">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright"><a href="https://www.lucastrigo.com/" target="_BLANK">Creada por Lucas Trigo</a></p>
+    </div>
+    
+</div>
+
+
+<!-------------js for toggle menu-------------->
+
+<script>
+    
+    var MenuItems = document.getElementById("MenuItems");
+    
+    MenuItems.style.maxHeight = "0px";
+    
+    function menutoggle()
+    {
+        if(MenuItems.style.maxHeight == "0px")
+            {
+                MenuItems.style.maxHeight = "200px";
+            }else
+            {
+                MenuItems.style.maxHeight = "0px"
+            } 
+    }
+    
+    
+</script>
+
+
+
+</body>
+</html>
+
