@@ -109,15 +109,24 @@
     const loginAlert = document.getElementById('inicioAlert');
     const registerAlert = document.getElementById('registerAlert');
 
-    loginAlert.addEventListener('click', function () {
-        alert('Opcion no disponible en este momento. Estamos trabajando para habilitarlo en la brevedad');
-        return;
-    })
+    loginAlert.addEventListener('click', function() {
+        Swal.fire({
+            icon: 'info',
+            title: 'Opcion no disponible en este momento.',
+            text: 'Estamos trabajando para habilitarlo en la brevedad',
+            footer: '<a href="https://www.instagram.com/francisca.bra/" target="_BLANK">Rosario, Laprida 1248 <br> Arroyo seco, Don Orione 828 <br> Villa Constitución, Sarmiento 718</a>'
+            });
+    return;});
 
-    registerAlert.addEventListener('click', function () {
-        alert('Opcion no disponible en este momento. Estamos trabajando para habilitarlo en la brevedad');
-        return;
-    })
+    registerAlert.addEventListener('click', function() {
+        Swal.fire({
+            icon: 'info',
+            title: 'Opcion no disponible en este momento.',
+            text: 'Estamos trabajando para habilitarlo en la brevedad',
+            footer: '<a href="https://www.instagram.com/francisca.bra/" target="_BLANK">Rosario, Laprida 1248 <br> Arroyo seco, Don Orione 828 <br> Villa Constitución, Sarmiento 718</a>'
+            });
+    return;});
+
 </script>
 
 
@@ -160,7 +169,8 @@
     </script>
     
     
-    
+    <script src="script.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
 
