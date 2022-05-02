@@ -723,4 +723,6 @@ form a{
 
 
 
-
+.pointerProduct {
+    cursor: pointer;
+}
